@@ -36,3 +36,5 @@ computer engineering, from Brasil</h2>
 <br clear="both">
 
 ###
+
+![Snake animation](https://github.com/Dedimm/Dedimm/blob/output/snake.svg)
