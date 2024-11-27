@@ -1,8 +1,8 @@
-name: Gerar Cobrinha
+name: Gerar Animação da Cobrinha
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  
   workflow_dispatch:
   push:
     branches:
@@ -12,18 +12,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-   
       - name: Checkout
         uses: actions/checkout@v3
 
-      
+      - name: Configurar variável de usuário manualmente
+        run: echo "USERNAME=${GITHUB_REPOSITORY_OWNER}" >> $GITHUB_ENV
+
       - name: Gerar a animação da cobrinha
         uses: Platane/snk@v2
         with:
-          github_user_name: ${{ github.repository_owner }}
+          github_user_name: ${{ env.USERNAME }}
           outputs: dist/cobrinha.svg
 
-     
       - name: Publicar a animação no branch de saída
         uses: peaceiris/actions-gh-pages@v3
         with:
