@@ -1,5 +1,4 @@
-<h2 align="left">Hi 👋! My name is Marcio Brito and I'm a 
-computer engineering, from Brasil</h2>
+<h2 align="left">Hi 👋! My name is Marcio Brito and I'm a systems analyst and developer, from Brasil</h2>
 
 ###
 
